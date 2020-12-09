@@ -1,0 +1,51 @@
+<%= form_for([@category, Product.new]) do |f| %>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+    <div class="field">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+    <div class="field">
+    <%= f.label :inr_price %>
+    <%= f.text_field :inr_price %>
+  </div>
+    <div class="field">
+    <%= f.label :usd_price %>
+    <%= f.text_field :usd_price %>
+  </div>
+    <div class="field">
+    <%= f.label :img_path %>
+    <%= f.text_field :img_path %>
+  </div>
+    </div>
+    <div class="field">
+    <%= f.label :column_1 %>
+    <%= f.text_field :column_1 %>
+  </div>
+    </div>
+    <div class="field">
+    <%= f.label :column_2 %>
+    <%= f.text_field :column_2 %>
+  </div>
+    </div>
+    <div class="field">
+    <%= f.label :column_3 %>
+    <%= f.text_field :column_3 %>
+  </div>
+    </div>
+    <div class="field">
+    <%= f.label :column_4 %>
+    <%= f.text_field :column_4 %>
+  </div>
+    </div>
+    <div class="field">
+    <%= f.label :column_5 %>
+    <%= f.text_field :column_5 %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

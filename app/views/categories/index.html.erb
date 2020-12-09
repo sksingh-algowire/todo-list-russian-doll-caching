@@ -1,0 +1,13 @@
+<%= Rails.application.config.cache_store %>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Categories</h1>
+
+<%= render partial: 'categories/category', collection: @categories %>
+
+<br>
+
+<%= link_to 'New Category', new_category_path %>
+
+<%= will_paginate @categories %>

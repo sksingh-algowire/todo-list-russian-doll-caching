@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @category.title %>
+</p>
+<p>
+  <strong>Tagline:</strong>
+  <%= @category.tagline %>
+</p>
+<p>
+  <% my_img_url = "#{@category.title.downcase}_main.jpg" %>
+  <%=image_tag(my_img_url, size: "250x250")%>
+</p>
+<ul>
+  <%= render partial: 'products/product', collection: @category.products, cached: true %>
+</ul>
+<%= link_to 'Edit', edit_category_path(@category) %> |
+<%= link_to 'Product in this category', category_products_path(@category) %> |
+<%= link_to 'New Product in this category', new_category_product_path(@category) %> |
+<%= link_to 'Back', categories_path %>

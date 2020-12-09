@@ -1,0 +1,16 @@
+<%= Rails.application.config.cache_store %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @product.description %>
+</p>
+<% for i in 1..8 %>
+  <p>
+    <% my_img_url = "#{@product.img_path}.jpg" %>
+    <%=image_tag(my_img_url, size: "360x240")%>
+  </p>
+<% end %>
+
+
+

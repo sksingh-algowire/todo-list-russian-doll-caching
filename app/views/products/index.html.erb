@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+<% if @products.size > 0 %>
+  <% product_type = @products[0].title
+    category_name = product_type.split(" ")[0].upcase
+  %>
+  <h1><%= category_name %> Products Listing</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @products.each do |product| %>
+        <tr>
+          <!--% my_img_url = "#{product.title.downcase}_1.jpg" % -->
+          <% my_img_url = "top_1.jpg" %>
+          <td><%= product.description %></td>
+          <td><%=image_tag(product.img_path, size: "50x50")%></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <h1>No Product in this Category please add them</h1>
+<% end %>
+
+<br>
+
+<%= link_to 'New Product', new_category_product_path %>
